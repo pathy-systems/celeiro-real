@@ -1,0 +1,1167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'font1';
+    src: url('../fonts/font1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../fonts/font2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('../fonts/font3.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+body {
+    background-color: #ca9c4d23;
+    padding: 0rem 2rem;
+
+}
+
+h1 {
+    font-family: font1;
+    text-align: center;
+    font-size: 2rem;
+    color: #ca9c4d;
+    user-select: none;
+}
+
+h2 {
+    text-align: center;
+    font-family: font1;
+    user-select: none;
+}
+
+h3 {
+    text-align: center;
+    font-family: font2;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+span {
+    font-family: font3;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+p {
+    font-family: font3;
+    user-select: none;
+}
+
+li {
+    list-style: none;
+    user-select: none;
+}
+
+#home {
+    margin-top: 5rem;
+}
+
+#produtos,
+#sobre,
+#contato {
+    margin: 10rem 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 2rem;
+}
+
+
+.container {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 24px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.082);
+    overflow: clip;
+    border-radius: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+
+/* LOGO */
+header img {
+    width: 55px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    margin-top: -1rem;
+}
+
+
+
+/* MENU LINKS */
+.menu-desktop {
+    display: flex;
+    gap: 2rem;
+}
+
+/* === LIQUID GLASS NOS LINKS === */
+.menu-link a {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+/* hover aparece vidro */
+.menu-link a:hover::before {
+    opacity: 1;
+}
+
+/* === ACTIVE em movimento estilo iOS === */
+.menu-desktop {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-highlight {
+    position: absolute;
+    height: 38px;
+    border-radius: 2rem;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    transition: all .6s ease;
+    z-index: 0;
+}
+
+.menu-texto {
+    color: black;
+    font-family: font2;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.btn-menu {
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    border: none;
+    font-size: .9rem;
+    background-color: inherit;
+    border-radius: 2rem;
+    color: #ffffff40;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    align-items: center;
+    box-shadow: 0 0 0 5px #091632da;
+
+
+}
+
+.btn-menu span {
+    color: black;
+    font-family: font2;
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+
+.btn-menu span:last-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+.btn-menu span:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-menu:hover {
+    box-shadow: 0 0 0 5px #0916326b;
+    color: #ffffff;
+    background-color: #091632;
+    transform: scale(1.05);
+
+}
+
+.btn-menu:hover span {
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.btn-menu i {
+    color: black;
+}
+
+.btn-menu:hover i {
+    color: white;
+    transition: .3s ease;
+}
+
+/* FIM DO HEADER */
+
+main {
+    margin-top: 5rem;
+}
+
+main h3 {
+    text-transform: uppercase;
+    font-family: font2;
+    font-size: 5rem;
+}
+
+/* BARRA DE BUSCA */
+.busca-input {
+    max-width: 100%;
+    width: 50%;
+    align-items: center;
+    font-family: font3;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #ca9c4d25;
+    border: 6px solid #0916326b;
+    transition: all 0.3s ease;
+}
+
+.busca-input:hover {
+    border: 5px solid #091632da;
+    transform: scale(1.05) translateY(-5px);
+}
+
+.busca-input:focus {
+    border: 5px solid #091632da;
+    transform: scale(1.05) translateY(-5px);
+    outline: none;
+}
+
+/* Grid produtos */
+
+
+
+
+.produtos-content2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin: 6rem auto;
+}
+
+.card-corpo2 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    margin: .5rem;
+}
+
+.card-corpo2:hover {
+    transform: translateY(-2%);
+}
+
+.card-corpo2:hover img {
+    box-shadow: 5px 5px 50px 2px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+
+}
+
+.card-corpo2 img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-content2 .line2 {
+    width: 50%;
+    /* Largura da linha */
+    height: 2px;
+    background-color: white;
+    /* Cor da linha */
+    margin: 0.5rem auto 1rem auto;
+    /* Centraliza a linha e dá espaçamento */
+}
+
+.text-content2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.card-corpo2:hover .text-content2 {
+    opacity: 1;
+    /* Torna o overlay visível */
+    visibility: visible;
+    /* Torna o elemento clicável novamente */
+}
+
+.text-content2 p {
+    font-size: 0.9rem;
+    font-weight: normal;
+    padding: 0 1rem;
+}
+
+.card-corpo2 span {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn-card2 {
+    display: flex;
+    margin: 1.5rem auto 0;
+    width: max-content;
+    padding: .5rem 1rem;
+    border: none;
+    font-size: .9rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    align-items: center;
+    box-shadow: 0 0 0 4px #ca9c4d;
+    background-color: transparent;
+    gap: .5rem;
+    transform: translateZ(0);
+    /* OU */
+    /* transform: perspective(1px) translateZ(0); */
+
+    /* Certifique-se de que a transição no botão também seja suave */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-card2 span {
+    font-size: .8rem;
+    color: #fff;
+}
+
+.btn-card2 i {
+    font-size: .8rem;
+    color: #fff;
+}
+
+.btn-card2:hover span {
+    font-weight: 800;
+    font-size: .8rem;
+    color: #000;
+}
+
+.btn-card2:hover i {
+    font-size: .8rem;
+    color: #000;
+}
+
+.btn-card2:hover {
+    box-shadow: 0 0 0 5px #ca9c4d86;
+    color: #000;
+    background-color: #ca9c4d;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.line {
+    background: #091632;
+    padding: 1.5px;
+    border-radius: 2rem;
+    max-width: 100%;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 6px;
+}
+
+
+
+/* MODAL */
+
+/* ====================================================== */
+/* ESTILO PARA ANIMAÇÃO */
+/* ====================================================== */
+
+
+.product-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-modal.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Conteúdo central do Modal: Agora ocupa QUASE toda a tela */
+.modal-content {
+    background-color: #fff;
+    border-radius: 0;
+    /* Remover bordas para sensação de tela cheia */
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    /* Remover padding do container principal */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    /* Habilita o layout de coluna */
+}
+
+/* Botão de Fechar "X": Posicionado fora da área de conteúdo (no canto do modal-content) */
+.close-btn {
+    color: #333;
+    font-size: 3rem;
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #d10101;
+}
+
+
+/* ====================================================== */
+/* 2. ESTRUTURA E SLIDES DO CARROSSEL */
+/* ====================================================== */
+/* Estrutura do Carrossel */
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Wrapper que será movido no carrossel */
+.carousel-slides-wrapper {
+    display: flex;
+    height: 100%;
+    /* Os slides (imagem + detalhes) ficarão lado a lado */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de Cada Slide (Ocupa 100% da largura do contêiner) */
+.carousel-slide {
+    display: flex;
+    min-width: 100%;
+    height: 100%;
+    align-items: stretch;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/* ====================================================== */
+/* LADO ESQUERDO: IMAGEM (50%) */
+/* ====================================================== */
+.slide-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que o comportamento de preenchimento seja o mesmo do card */
+}
+
+
+/* ====================================================== */
+/* LADO DIREITO: DETALHES E CONTROLES (50%) */
+/* ====================================================== */
+.slide-details {
+    flex: 1;
+    /* Ocupa 50% do espaço */
+    max-width: 50%;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Espaço entre o topo (conteúdo) e a base (controles) */
+}
+
+.slide-details h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-family: font2;
+    text-transform: uppercase;
+}
+
+.slide-details p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
+    text-align: center;
+}
+
+.slide-details .line2 {
+    background-color: #ccc;
+    width: 100%;
+    height: 1px;
+    margin: 1.5rem 0;
+}
+
+/* Container para botões (se houver mais de um) */
+.slide-actions {
+    margin-top: 2rem;
+    /* Alinhar botões horizontalmente aqui */
+}
+
+.slide-actions .btn-card2 span {
+    color: #000;
+}
+
+.slide-actions .btn-card2 i {
+    color: #000;
+}
+
+/* ====================================================== */
+/* 3. CONTROLES E NAVEGAÇÃO (ANTERIOR/PRÓXIMO) - REVISADO */
+/* ====================================================== */
+
+/* Contêiner para os botões de navegação, agora na parte INFERIOR DIREITA */
+.carousel-controls {
+    /* O JS já está selecionando .prev-btn e .next-btn; podemos estilizá-los diretamente */
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    /* Alinha os botões à esquerda da seção de detalhes */
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.prev-btn,
+.next-btn {
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    color: #333;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: max-content;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    box-shadow: 0 0 0 4px #ca9c4d;
+    background-color: transparent;
+
+}
+
+
+.prev-btn:hover,
+.next-btn:hover {
+    box-shadow: 0 0 0 5px #ca9c4d86;
+    color: #000;
+    background-color: #ca9c4d;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Indicadores de Slide (Dots): Mantenha o estilo anterior */
+.carousel-dots {
+    /* Pode ser movido para dentro da área .slide-details se quiser */
+    text-align: center;
+}
+
+
+/* Mobile menu */
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mobile-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111;
+    position: relative;
+}
+
+.mobile-toggle .hamburger::before,
+.mobile-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: #111;
+}
+
+.mobile-toggle .hamburger::before {
+    top: -7px;
+}
+
+.mobile-toggle .hamburger::after {
+    top: 7px;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 2000;
+    text-align: center;
+}
+
+.mobile-menu-inner {
+    width: 280px;
+    background: #fff;
+    height: 100%;
+    padding: 1.5rem;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+    transform: translateX(-110%);
+    transition: transform 0.35s ease;
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.mobile-menu.open .mobile-menu-inner {
+    transform: translateX(0);
+}
+
+.mobile-close {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    margin-left: auto;
+    display: block;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 2rem 0;
+}
+
+.mobile-menu-list li {
+    margin: 2rem 0;
+}
+
+.mobile-menu-list a {
+    text-transform: uppercase;
+    font-family: font2;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Ícones sociais no menu mobile */
+.mobile-menu-inner .wrapper {
+    position: absolute;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+/* footer */
+
+.footer {
+    padding: 2rem 2rem;
+    /* compensar o padding horizontal do body (2rem) para que o fundo vá até as bordas */
+    margin: 10rem -2rem 0 -2rem;
+    background: #00000017;
+}
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-footer {
+    display: block;
+    width: max-content;
+    padding: .8rem 1rem;
+    border: none;
+    font-size: .9rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    align-items: center;
+    box-shadow: 0 0 0 5px #091632da;
+    background-color: transparent;
+}
+
+.btn-footer:hover {
+    box-shadow: 0 0 0 5px #0916326b;
+    color: #ffffff;
+    background-color: #091632;
+    transform: translateY(-5%) scale(1.05);
+}
+
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper i {
+    color: black;
+}
+
+
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #18f223;
+    color: #fff;
+}
+
+.wrapper .facebook:hover i {
+    color: white;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .twitter:hover i {
+    color: white;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+.wrapper .instagram:hover i {
+    color: white;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+    background: #000000;
+    color: #fff;
+}
+
+.wrapper .tiktok:hover i {
+    color: white;
+}
+
+/* ====== NOVO EFEITO: CARD EXPANDINDO ====== */
+
+/* Passo 1 — O card clicado se expande */
+.card-corpo2.expandindo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    border-radius: 0;
+    transform: scale(1);
+    transition: all 5s ease-in-out;
+    filter: brightness(1);
+}
+
+/* garante que a imagem do card cubra toda a tela */
+.card-corpo2.expandindo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Enquanto o card se expande, o resto da página escurece */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.card-corpo2.expandindo~body::after {
+    opacity: 1;
+}
+
+/* Passo 2 — Modal aparece suavemente após expansão */
+.product-modal {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: all 1s ease;
+}
+
+.product-modal.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ====== EFEITO DE ZOOM SUAVE DO CARD ====== */
+
+
+
+
+/* responsividade: esconder menu desktop e mostrar toggle */
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 120px !important;
+    }
+
+    header {
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001;
+        background-color: rgba(0, 0, 0, 0.082);
+        backdrop-filter: blur(20px);
+        border-radius: 2rem;
+        padding: 20px 24px;
+        display: flex;
+        max-width: 90%;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    /* Header mobile fixo, igual ao .container */
+    .container {
+        display: none;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .titulo-home {
+        font-size: 5rem;
+    }
+
+    .screen {
+        height: 100%;
+        width: 100%;
+        max-width: 70%;
+    }
+
+    .produto-item {
+        flex-direction: column;
+    }
+
+    .card-body {
+        width: 100%;
+        text-align: center;
+    }
+
+    .produto-item img {
+        width: 100%;
+    }
+
+    .contato-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .visao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contato-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.25rem;
+    }
+
+    .contato-info,
+    .contato-form {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem;
+        border-radius: 2rem;
+    }
+
+    /* forçar quebra de palavras e prevenir overflow de textos longos */
+    .info-content p,
+    .info-content h4 {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* permitir que o item quebre e que o ícone fique à esquerda sem estourar */
+    .info-item {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0rem;
+        align-items: flex-start;
+    }
+
+    .info-item p {
+        font-size: .9rem;
+    }
+
+    /* no hover, remover margin negativo e padding extra que causavam overflow */
+    .info-item:hover {
+        transform: none;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    /* inputs ocupem 100% do espaço disponível */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .menu-desktop {
+        display: flex;
+        gap: .5rem;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .screen {
+        height: 400px;
+        width: 600px;
+    }
+
+    /* make carousel stack vertically and move prev/next below the card */
+    .carousel-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* allow carousel to take full width then buttons to wrap on next line */
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* make the carousel take the full row */
+    .carousel {
+        flex: 0 0 100%;
+        order: 1;
+        width: 100%;
+    }
+
+    /* buttons sit side-by-side on the next row */
+    .carousel-btn {
+        position: static;
+        transform: none;
+        display: inline-flex;
+        margin: 0.25rem .5rem;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        order: 2;
+        transform: translateY(0);
+    }
+
+
+    .info-item {
+        flex-direction: row;
+        align-items: left;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+
+
+
+
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeiro Real | Produtos</title>
+    <link rel="stylesheet" href="assets/css/produtos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="assets/img/coroa-dourada.png">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="assets/img/coroa-dourada.png" alt=""></a>
+        <!-- Mobile toggle -->
+        <div class="container">
+            <ul class="menu-desktop">
+                <li class="menu-link">
+                    <a href="index.html" class="active"><span class="menu-texto">home</span></a>
+                </li>
+                <li class="menu-link">
+                    <a href="index.html#produtos"><span class="menu-texto">produtos</span></a>
+                </li>
+                <li class="menu-link">
+                    <a href="#sobre"><span class="menu-texto">sobre</span></a>
+                </li>
+                <li class="menu-link">
+                    <a href="index.html#contato"><span class="menu-texto">contato</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="index.html">
+            <button class="btn-menu">
+                <span>Voltar para Home</span>
+                <i class="bi bi-arrow-up-right-circle"></i>
+            </button>
+        </a>
+        <button class="mobile-toggle" aria-label="Abrir menu" type="button">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+    </header>
+
+    <main>
+
+        <h1>Conheça nossa variedade de produtos</h1>
+        <h3>Nossos produtos</h3>
+        <div class="pesquisa">
+            <input type="text" id="buscaProduto" class="busca-input" placeholder="Busque o produto...">
+        </div>
+
+
+        <div class="produtos-content2">
+            <article class="card-corpo2" data-product-name="amarelo">
+                <img src="assets/img/cantrei.jpeg" alt="roma">
+                <div class="text-content2">
+                    <span>Melão Amarelo</span>
+                    <div class="line2"></div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="btn-card2">
+                        <span>ver todos</span>
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </article>
+            <article class="card-corpo2">
+                <img src="assets/img/produtos/roma.jpg" alt="">
+                <div class="text-content2">
+                    <span>Melão amarelo</span>
+                    <div class="line2"></div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="btn-card2">
+                        <span>ver todos</span>
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </article>
+            <article class="card-corpo2">
+                <img src="assets/img/produtos/roma.jpg" alt="">
+                <div class="text-content2">
+                    <span>Melão amarelo</span>
+                    <div class="line2"></div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="btn-card2">
+                        <span>ver todos</span>
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </article>
+
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Celeiro Real, Todos os direitos reservados</p>
+
+            <!-- From Uiverse.io by david-mohseni -->
+            <ul class="wrapper">
+                <a href="https://wa.me/5511999589953" target="_blank">
+                    <li class="icon facebook">
+                        <span class="tooltip">WhatsApp</span>
+                        <i class="bi bi-whatsapp"></i>
+                    </li>
+                </a>
+                <li class="icon twitter">
+                    <span class="tooltip">Maps</span>
+                    <i class="bi bi-geo-alt"></i>
+                </li>
+                <li class="icon instagram">
+                    <span class="tooltip">Instagram</span>
+                    <i class="bi bi-instagram"></i>
+                </li>
+                <a href="">
+                    <li class="icon tiktok">
+                        <span class="tooltip">TikTok</span>
+                        <i class="bi bi-tiktok"></i>
+                    </li>
+                </a>
+            </ul>
+
+            <a href="https://spedrooliveira.github.io/siteoficial/">
+            <button type="submit" class="btn btn-footer" id="btnEnviar">
+                <span class="btn-texto">Desenvolvido por Pedro Santos </span>
+                <i class="bi bi-send"></i>
+            </button>
+            </a>
+            
+    </footer>
+
+    <div id="product-modal" class="product-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+
+            <div class="carousel-container">
+
+                <div id="carousel-slides-wrapper" class="carousel-slides-wrapper">
+                    <div class="carousel-slide">
+                        <div class="slide-image">
+                        </div>
+                        <div class="slide-details">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/modal.js"></script>
+
+</html>
